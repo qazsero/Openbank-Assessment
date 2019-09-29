@@ -9,7 +9,7 @@ export const submitPassword = (pass, repass, optionalQuestion) => async dispatch
       type: types.SET_PASSWORD_SUCCESS,
       payload: {
         password:pass, 
-        requirePassword: repass, 
+        repeatPassword: repass, 
         hint: optionalQuestion
       }
     })
@@ -18,13 +18,11 @@ export const submitPassword = (pass, repass, optionalQuestion) => async dispatch
       type: types.SET_PASSWORD_FAIL,
       payload: {
         password:pass, 
-        requirePassword: repass, 
+        repeatPassword: repass, 
         hint: optionalQuestion
       }
     })
   }
 }
 
-export const resetPasswordState = ()  => async dispatch => (
-  dispatch({type: types.RESET_PASSWORD_STATE})
-)
+export const resetPasswordState = ()  => ({type: types.RESET_PASSWORD_STATE})
