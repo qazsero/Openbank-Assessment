@@ -28,11 +28,11 @@ const Info = () => {
         <h2><FormattedMessage id="app.title" /></h2>
 
         <div className={styles.twoBlocks}>
-          <div>
+          <div className={styles.block}>
             <img src={leftIcon} alt="Bloque 1" />
             <p><FormattedMessage id="info.left" /></p>
           </div>
-          <div>
+          <div className={styles.block}>
             <img src={rightIcon} alt="Bloque 2" />
             <p><FormattedMessage id="info.right" /></p>
           </div>

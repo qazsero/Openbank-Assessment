@@ -25,10 +25,8 @@ const Feedback = () => {
   switch (success) {
   case true:
     return PositiveFeedback()
-  case false:
-    return NegativeFeedback()
   default:
-    return null
+    return NegativeFeedback()
   }
 }
 

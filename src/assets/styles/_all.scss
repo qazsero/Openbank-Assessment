@@ -76,11 +76,11 @@ $break-lg: 1260px;
 
 @mixin ob-title($color:$ob-blue-1){
     font-family: 'Quicksand';
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     color: $color;
     line-height: 2em;
-    @include respond-to(tablet-screens) { font-size: 12px }
+    @include respond-to(tablet-screens) { font-size: 14px }
 }
 
 @mixin ob-body($color:$ob-blue-1, $weight:400){
