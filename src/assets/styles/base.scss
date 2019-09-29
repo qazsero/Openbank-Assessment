@@ -1,0 +1,45 @@
+@import './all';
+
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+    height: 100%;
+    background: $ob-grey-4;
+}
+
+body{
+    height: 100%;   
+    display: flex;  /*enables flex content for its children*/
+    box-sizing: border-box;
+}
+
+#root{
+    width:100%;
+}
+
+h1{
+    @include ob-h1();
+}
+
+h2{
+    @include ob-h2();
+}
+
+p{
+    @include ob-body();
+}
+
+.title{
+    @include ob-title();
+}
+
+.small{
+    @include ob-body-small();
+}
+
+.row{
+    margin-top: 20px;
+}

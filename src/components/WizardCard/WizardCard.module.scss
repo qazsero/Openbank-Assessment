@@ -1,0 +1,65 @@
+@import '../../assets/styles/all';
+
+.stepContainer{
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    background: $ob-grey-2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include ob-container();
+    .steps{
+        padding: 20px 0;
+
+        .li {
+            width: 2em;
+            height: 2em;
+            text-align: center;
+            line-height: 2em;
+            border-radius: 1em;
+            background: $ob-red-1;
+            margin: 0 1em;
+            display: inline-block;
+            @include ob-body($white);
+            position: relative;
+        }
+          
+        .active {
+            background: $ob-blue-1;
+            box-shadow: 0 0 5px rgba($ob-blue-1, 0.6);
+            width: 2.5em;
+            height: 2.5em;
+            line-height: 2.5em;
+            border-radius: 2em;
+
+            & ~ .li {
+                background: $ob-grey-1;
+            }
+              
+            & ~ .li::before {
+            background: $ob-grey-1;
+            }
+        }
+    }
+}
+
+.card{
+    background: white;
+    box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.4);
+    @include ob-container();
+    
+    .container{
+        padding: 30px 0;
+        width:720px;
+        margin:auto;
+    }
+
+    .footer{
+        border-top:1px solid $ob-grey-2;
+        .container{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@import '../../assets/styles/all';
+
+.message {
+    display: flex;
+    flex-direction: row;
+    .icon{
+        font-size:60px;
+        color: $ob-blue-1;
+        margin-right:30px;
+    }
+}
+
+.link{
+    @include ob-body-small($ob-red-1, 700);
+    text-decoration: none;
+}

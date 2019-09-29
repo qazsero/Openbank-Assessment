@@ -1,0 +1,39 @@
+@import '../../assets/styles/all';
+
+.group{
+    display:flex;
+    flex-direction: column;
+    margin-bottom:20px;
+    flex:1;
+    position:relative;
+    
+    .error{
+        @include ob-body-small($ob-red-1, 400);
+        margin-top:15px;
+        display: block;
+    }
+    
+    .error .errorIcon{
+        margin-right:5px;
+    }
+
+    .input{
+        height: 40px;
+        min-width:260px;
+        border:1px solid $ob-grey-2;
+        text-indent: 15px;
+        &::placeholder{
+            @include ob-body($ob-grey-1, 400);
+            opacity:1;
+        }
+    }
+
+    .typePassIcon{
+        position: absolute;
+        right: 15px;
+        z-index: 10;
+        top: 13px;
+    }
+}
+
+
