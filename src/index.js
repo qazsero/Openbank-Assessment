@@ -15,18 +15,16 @@ import reducers from './reducers'
 //Application css import
 import './assets/styles/base.scss'
 
-const messages = {
-  en: text_en,
-  es: text_es
-}
+
 const usersLocale = navigator.language.split(/[-_]/)[0]
+const messages = usersLocale.includes('en') ? text_en : text_es
 
 const middleware = [thunk]
 const createStoreWithMiddleware = applyMiddleware(...middleware)(createStore)
 
 ReactDOM.render(
   <Provider  store={createStoreWithMiddleware(reducers)}>
-    <IntlProvider messages={text_es} locale={usersLocale} key={usersLocale} defaultLocale='es'>
+    <IntlProvider messages={messages} locale={usersLocale} key={usersLocale} defaultLocale='es'>
       <BrowserRouter>
         <App />
       </BrowserRouter>
